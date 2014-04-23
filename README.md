@@ -12,7 +12,7 @@ Your program should determine which card the volunteer chose; or if there is mor
 ###	Solving this problem
 Usually, Google Code Jam problems have 1 Small input and 1 Large input. This problem has only **1 Small input**. Once you have solved the Small input, you have finished solving this problem.<br /><br />
 ### Input
-The first line of the input gives the number of test cases,?T.?T?test cases follow. Each test case starts with a line containing an integer: the answer to the first question. The next 4 lines represent the first arrangement of the cards: each contains 4 integers, separated by a single space. The next line contains the answer to the second question, and the following four lines contain the second arrangement in the same format.<br /><br />
+The first line of the input gives the number of test cases, **T**. **T** test cases follow. Each test case starts with a line containing an integer: the answer to the first question. The next 4 lines represent the first arrangement of the cards: each contains 4 integers, separated by a single space. The next line contains the answer to the second question, and the following four lines contain the second arrangement in the same format.<br /><br />
 ### Output
 For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1).<br /><br />
 If there is a single card the volunteer could have chosen, y should be the number on the card. If there are multiple cards the volunteer could have chosen, y should be "Bad magician!", without the quotes. If there are no cards consistent with the volunteer's answers, y should be "Volunteer cheated!", without the quotes. The text needs to be exactly right, so consider copying/pasting it from here.<br /><br />
@@ -65,10 +65,10 @@ Problem B. Cookie Clicker Alpha
 ###	Introduction
 *Cookie Clicker* is a Javascript game by Orteil, where players click on a picture of a giant cookie. Clicking on the giant cookie gives them cookies. They can spend those cookies to buy buildings. Those buildings help them get even more cookies. Like this problem, the game is very cookie-focused. This problem has a similar idea, but it does not assume you have played?Cookie Clicker. Please don't go play it now: it might be a long time before you come back.<br />
 ###	Problem
-In this problem, you start with 0 cookies. You gain cookies at a rate of 2 cookies per second, by clicking on a giant cookie. Any time you have at least**C**cookies, you can buy a cookie farm. Every time you buy a cookie farm, it costs you?C?cookies and gives you an extra?F?cookies per second.<br /><br />
-Once you have?X?cookies that you haven't spent on farms, you win! Figure out how long it will take you to win if you use the best possible strategy.<br /><br />
+In this problem, you start with 0 cookies. You gain cookies at a rate of 2 cookies per second, by clicking on a giant cookie. Any time you have at least **C** cookies, you can buy a cookie farm. Every time you buy a cookie farm, it costs you **C** cookies and gives you an extra?F?cookies per second.<br /><br />
+Once you have **X** cookies that you haven't spent on farms, you win! Figure out how long it will take you to win if you use the best possible strategy.<br /><br />
 ###	Example
-Suppose**C**=500.0,**F**=4.0 and**X**=2000.0. Here's how the best possible strategy plays out:<br /><br />
+Suppose **C**=500.0, **F**=4.0 and **X**=2000.0. Here's how the best possible strategy plays out:<br /><br />
 1.	You start with 0 cookies, but producing 2 cookies per second.<br /><br />
 2.	After**250**seconds, you will have**C**=500 cookies and can buy a farm that produces **F**=4 cookies per second.<br /><br />
 3.	After buying the farm, you have 0 cookies, and your total cookie production is 6 cookies per second.<br /><br />
@@ -80,7 +80,7 @@ Suppose**C**=500.0,**F**=4.0 and**X**=2000.0. Here's how the best possible strat
 Total time: 250 + 83.3333333 + 50 + 142.8571429 = 526.1904762 seconds.<br /><br />
 Notice that you get cookies continuously: so 0.1 seconds after the game starts you'll have 0.2 cookies, and £k seconds after the game starts you'll have 2£k cookies.<br />
 ###	Input
-The first line of the input gives the number of test cases,**T**. **T** lines follow. Each line contains three space-separated real-valued numbers:**C**, **F** and **X**, whose meanings are described earlier in the problem statement.<br /><br />
+The first line of the input gives the number of test cases, **T**. **T** lines follow. Each line contains three space-separated real-valued numbers:**C**, **F** and **X**, whose meanings are described earlier in the problem statement.<br /><br />
 **C**, **F** and **X** will each consist of at least 1 digit followed by 1 decimal point followed by from 1 to 5 digits. There will be no leading zeroes.<br />
 ###	Output
 For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1) and y is the minimum number of seconds it takes before you can have **X** delicious cookies.<br /><br />
@@ -113,23 +113,25 @@ We recommend outputting y to 7 decimal places, but it is not required. y will be
 	 
 ### Note
 *Cookie Clicker* was created by Orteil. Orteil does not endorse and has no involvement with Google Code Jam.
-
-Problem C.?Minesweeper Master
-XVII.	Problem
-Minesweeper?is a computer game that became popular in the 1980s, and is still included in some versions of the?Microsoft Windows?operating system. This problem has a similar idea, but it does not assume you have played?Minesweeper.
-In this problem, you are playing a game on a grid of identical cells. The content of each cell is initially hidden. There are?M?mines hidden in?M?different cells of the grid. No other cells contain mines. You may click on any cell to reveal it. If the revealed cell contains a mine, then the game is over, and you lose. Otherwise, the revealed cell will contain a digit between 0 and 8, inclusive, which corresponds to the number of neighboring cells that contain mines. Two cells are neighbors if they share a corner or an edge. Additionally, if the revealed cell contains a 0, then all of the neighbors of the revealed cell are automatically revealed as well, recursively. When all the cells that don't contain mines have been revealed, the game ends, and you win.
-For example, an initial configuration of the board may look like this ('*' denotes a mine, and 'c' is the first clicked cell):
-*..*...**.
-....*.....
-..c..*....
-........*.
-..........
-There are no mines adjacent to the clicked cell, so when it is revealed, it becomes a 0, and its 8 adjacent cells are revealed as well. This process continues, resulting in the following board:
-*..*...**.
-1112*.....
-00012*....
-00001111*.
-00000001..
+
+Problem C. Minesweeper Master
+--------------------------------------
+### Problem
+*Minesweeper* is a computer game that became popular in the 1980s, and is still included in some versions of the?Microsoft Windows?operating system. This problem has a similar idea, but it does not assume you have played *Minesweeper*.<br /><br />
+In this problem, you are playing a game on a grid of identical cells. The content of each cell is initially hidden. There are **M** mines hidden in **M** different cells of the grid. No other cells contain mines. You may click on any cell to reveal it. If the revealed cell contains a mine, then the game is over, and you lose. Otherwise, the revealed cell will contain a digit between 0 and 8, inclusive, which corresponds to the number of neighboring cells that contain mines. Two cells are neighbors if they share a corner or an edge. Additionally, if the revealed cell contains a 0, then all of the neighbors of the revealed cell are automatically revealed as well, recursively. When all the cells that don't contain mines have been revealed, the game ends, and you win.<br /><br />
+For example, an initial configuration of the board may look like this ('*' denotes a mine, and 'c' is the first clicked cell):<br />
+
+		*..*...**.
+		....*.....
+		..c..*....
+		........*.
+		..........
+There are no mines adjacent to the clicked cell, so when it is revealed, it becomes a 0, and its 8 adjacent cells are revealed as well. This process continues, resulting in the following board:<br /><br />
+		*..*...**.
+		1112*.....
+		00012*....
+		00001111*.
+		00000001..
 At this point, there are still un-revealed cells that do not contain mines (denoted by '.' characters), so the player has to click again in order to continue the game.
 You want to win the game as quickly as possible. There is nothing quicker than winning in one click. Given the size of the board (R?x?C) and the number of hidden mines?M, is it possible (however unlikely) to win in one click? You may choose where you click. If it is possible, then print any valid mine configuration and the coordinates of your click, following the specifications in the?Output?section. Otherwise, print "Impossible".
 XVIII.	Input
