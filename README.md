@@ -117,7 +117,7 @@ We recommend outputting y to 7 decimal places, but it is not required. y will be
 Problem C. Minesweeper Master
 --------------------------------------
 ### Problem
-*Minesweeper* is a computer game that became popular in the 1980s, and is still included in some versions of the?Microsoft Windows?operating system. This problem has a similar idea, but it does not assume you have played *Minesweeper*.<br /><br />
+*Minesweeper* is a computer game that became popular in the 1980s, and is still included in some versions of the *Microsoft Windows* operating system. This problem has a similar idea, but it does not assume you have played *Minesweeper*.<br /><br />
 In this problem, you are playing a game on a grid of identical cells. The content of each cell is initially hidden. There are **M** mines hidden in **M** different cells of the grid. No other cells contain mines. You may click on any cell to reveal it. If the revealed cell contains a mine, then the game is over, and you lose. Otherwise, the revealed cell will contain a digit between 0 and 8, inclusive, which corresponds to the number of neighboring cells that contain mines. Two cells are neighbors if they share a corner or an edge. Additionally, if the revealed cell contains a 0, then all of the neighbors of the revealed cell are automatically revealed as well, recursively. When all the cells that don't contain mines have been revealed, the game ends, and you win.<br /><br />
 For example, an initial configuration of the board may look like this ('*' denotes a mine, and 'c' is the first clicked cell):<br />
 
@@ -126,133 +126,124 @@ For example, an initial configuration of the board may look like this ('*' denot
 		..c..*....
 		........*.
 		..........
-There are no mines adjacent to the clicked cell, so when it is revealed, it becomes a 0, and its 8 adjacent cells are revealed as well. This process continues, resulting in the following board:<br /><br />
+There are no mines adjacent to the clicked cell, so when it is revealed, it becomes a 0, and its 8 adjacent cells are revealed as well. This process continues, resulting in the following board:<br />
+		
 		*..*...**.
 		1112*.....
 		00012*....
 		00001111*.
 		00000001..
-At this point, there are still un-revealed cells that do not contain mines (denoted by '.' characters), so the player has to click again in order to continue the game.
-You want to win the game as quickly as possible. There is nothing quicker than winning in one click. Given the size of the board (R?x?C) and the number of hidden mines?M, is it possible (however unlikely) to win in one click? You may choose where you click. If it is possible, then print any valid mine configuration and the coordinates of your click, following the specifications in the?Output?section. Otherwise, print "Impossible".
-XVIII.	Input
-The first line of the input gives the number of test cases,?T.?T?lines follow. Each line contains three space-separated integers:?R,?C, and?M.
-XIX.	Output
-For each test case, output a line containing "Case #x:", where x is the test case number (starting from 1). On the following?R?lines, output the board configuration with?C?characters per line, using '.' to represent an empty cell, '*' to represent a cell that contains a mine, and 'c' to represent the clicked cell.
+At this point, there are still un-revealed cells that do not contain mines (denoted by '.' characters), so the player has to click again in order to continue the game.<br /><br />
+You want to win the game as quickly as possible. There is nothing quicker than winning in one click. Given the size of the board (**R** x **C**) and the number of hidden mines **M**, is it possible (however unlikely) to win in one click? You may choose where you click. If it is possible, then print any valid mine configuration and the coordinates of your click, following the specifications in the?Output?section. Otherwise, print "Impossible".<br /><br />
+### Input
+The first line of the input gives the number of test cases, **T**. **T** lines follow. Each line contains three space-separated integers: **R**, **C**, and **M**.<br /><br />
+### Output
+For each test case, output a line containing "Case #x:", where x is the test case number (starting from 1). On the following **R** lines, output the board configuration with **C** characters per line, using '.' to represent an empty cell, '*' to represent a cell that contains a mine, and 'c' to represent the clicked cell.<br /><br />
 If there is no possible configuration, then instead of the grid, output a line with"Impossible"?instead. If there are multiple possible configurations, output any one of them.
-XX.	Limits
-0 ??M?<?R?*?C.
-XXI.	Small dataset
-1 ??T?? 230.
-1 ??R,?C?? 5.
-XXII.	Large dataset
-1 ??T?? 140.
-1 ??R,?C?? 50.
-XXIII.	Sample
- 
+### Limits
+0 <= **M** < **R** * **C**.
+### Small dataset
+1 <= **T** <= 230.<br />
+1 <= **R**, **C** <= 5.
+### Large dataset
+1 <= **T** <= 140.<br />
+1 <= **R**, **C** <= 50.
+### Sample
+		Input: 
+		5
+		5 5 23
+		3 1 1
+		2 2 1
+		4 7 3
+		10 10 82
+		
+		Output:
+		Case #1:
+		Impossible
+		Case #2:
+		c
+		.
+		*
+		Case #3:
+		Impossible
+		Case #4:
+		......*
+		.c....*
+		.......
+		..*....
+		Case #5:
+		**********
+		**********
+		**********
+		****....**
+		***.....**
+		***.c...**
+		***....***
+		**********
+		**********
+		**********
+		
 
-Input?
-?	
-Output?
-?	   
-5
-5 5 23
-3 1 1
-2 2 1
-4 7 3
-10 10 82
-	Case #1:
-Impossible
-Case #2:
-c
-.
-*
-Case #3:
-Impossible
-Case #4:
-......*
-.c....*
-.......
-..*....
-Case #5:
-**********
-**********
-**********
-****....**
-***.....**
-***.c...**
-***....***
-**********
-**********
-**********
-	 
-
-
-Problem D.?Deceitful War
-XXIV.	Problem
-Naomi and Ken sometimes play games together. Before they play, each of them gets?Nidentical-looking blocks of wood with masses between 0.0kg and 1.0kg (exclusive). All of the blocks have different weights. There are lots of games they could play with those blocks, but they usually play something they call War. Here is how War works:
-1.	Each player weighs each of his or her own blocks, so each player knows the weights of all of his or her own blocks, but not the weights of the other player's blocks.
-2.	They repeat the following process?N?times:
-1.	Naomi chooses one of her own blocks, with mass?ChosenNaomi.
-2.	Naomi tells Ken the mass of the block she chose.
-3.	Ken chooses one of his own blocks, with mass?ChosenKen.
-4.	They each put their block on one side of a?balance scale, and the person whose block is heavier gets one point.
-5.	Both blocks are destroyed in a fire.
-Naomi has realized three things about War. First, she has realized that she loses a lot. Second, she has realized that there is a unique strategy that Ken can follow to maximize his points without assuming anything about Naomi's strategy, and that Ken always uses it. Third, she has realized that she hates to lose. Naomi has decided that instead of playing War, she will play a game she calls Deceitful War. The great thing about Deceitful War is that Ken will think they're playing War!
-Here is how Deceitful War works, with differences between Deceitful War and War in bold:
-1.	Each player weighs each of his or her own blocks.?Naomi also weighs Ken's blocks while he isn't looking, so Naomi knows the weights of all blocks?and Ken only knows the weights of his own blocks.
-2.	They repeat the following process?N?times:
-1.	Naomi chooses one of her own blocks, with mass?ChosenNaomi.
-2.	Naomi tells Ken?a number,?ToldNaomi, between 0.0kg and 1.0kg exclusive.?Ken, who thinks they're playing War, thinks the number Naomi just told him is?ChosenNaomi.
-3.	Ken chooses one of his own blocks, with mass?ChosenKen.
-4.	They each put their block on one side of a?balance scale, and the person whose block is heavier gets one point.
-5.	Both blocks are destroyed in a fire.
-Naomi doesn't want Ken to know that she isn't playing War; so when she is choosing which block to play, and what mass to tell Ken, she must make sure that the balance scale won't reveal that?ChosenNaomi?¡Ú ToldNaomi. In other words, she must make decisions so that:
-„h	ChosenNaomi?> ChosenKen?if, and only if,?ToldNaomi?> ChosenKen, and
-„h	ToldNaomi?is not equal to the mass of any of Ken's blocks, because he knows that isn't possible.
-It might seem like Naomi won't win any extra points by being deceitful, because Ken might discover that she wasn't playing War; but Naomi knows Ken thinks both players are playing War, and she knows what he knows, and she knows Ken will always follow his unique optimal strategy for War, so she can always predict what he will play.
-You'll be given the masses of the blocks Naomi and Ken started with. Naomi will play Deceitful War optimally to gain the maximum number of points. Ken will play War optimally to gain the maximum number of points?assuming that both players are playing War. What will Naomi's score be? What would it have been if she had played War optimally instead?
-XXV.	Examples
-If each player has a single block left, where Naomi has 0.5kg and Ken has 0.6kg, then Ken is guaranteed to score the point. Naomi can't say her number is ? 0.6kg, or Ken will know she isn't playing War when the balance scale shows his block was heavier.
-If each player has two blocks left, where Naomi has [0.7kg, 0.2kg] and Ken has [0.8kg, 0.3kg], then Naomi could choose her 0.2kg block, and deceive Ken by telling him that she chose a block that was 0.6kg. Ken assumes Naomi is telling the truth (as in how the War game works) and will play his 0.8kg block to score a point. Ken was just deceived, but he will never realize it because the balance scale shows that his 0.8kg block is, like he expected, heavier than the block Naomi played. Now Naomi can play her 0.7kg block, tell Ken it is 0.7kg, and score a point. If Naomi had played War instead of Deceitful War, then Ken would have scored two points and Naomi would have scored zero.
-XXVI.	Input
-The first line of the input gives the number of test cases,?T.?T?test cases follow. Each test case starts with a line containing a single integer?N, the number of blocks each player has. Next follows a line containing?N?space-separated real numbers: the masses of Naomi's blocks, in kg. Finally there will be a line containing?N?space-separated real numbers: the masses of Ken's blocks, in kg.
-Each of the masses given to Ken and Naomi will be represented as a 0, followed by a decimal point, followed by 1-5 digits. Even though all the numbers in the input have 1-5 digits after the decimal point, Ken and Naomi don't know that; so Naomi can still tell Ken that she played a block with mass 0.5000001kg, and Ken has no reason not to believe her.
-XXVII.	Output
-For each test case, output one line containing "Case #x:?y?z", where?x?is the test case number (starting from 1),?y?is the number of points Naomi will score if she plays Deceitful War optimally, and?z?is the number of points Naomi will score if she plays War optimally.
-XXVIII.	Limits
-1 ??T?? 50.
-All the masses given to Ken and Naomi are distinct, and between 0.0 and 1.0 exclusive.
-XXIX.	Small dataset
-1 ??N?? 10.
-XXX.	Large dataset
-1 ??N?? 1000.
-XXXI.	Sample
- 
-
-Input?
-?		   
-4
-1
-0.5
-0.6
-2
-0.7 0.2
-0.8 0.3
-3
-0.5 0.1 0.9
-0.6 0.4 0.3
-9
-0.186 0.389 0.907 0.832 0.959 0.557 0.300 0.992 0.899
-0.916 0.728 0.271 0.520 0.700 0.521 0.215 0.341 0.458
+Problem D. Deceitful War
+------------------------
+### Problem
+Naomi and Ken sometimes play games together. Before they play, each of them gets **N** identical-looking blocks of wood with masses between 0.0kg and 1.0kg (exclusive). All of the blocks have different weights. There are lots of games they could play with those blocks, but they usually play something they call War. Here is how War works:<br /><br />
+1.	Each player weighs each of his or her own blocks, so each player knows the weights of all of his or her own blocks, but not the weights of the other player's blocks.<br />
+2.	They repeat the following process **N** times:<br />
+> 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.<br />
+> 2.	Naomi tells Ken the mass of the block she chose.<br />
+3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
+4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
+5.	Both blocks are destroyed in a fire.<br /><br />
+Naomi has realized three things about War. First, she has realized that she loses a lot. Second, she has realized that there is a unique strategy that Ken can follow to maximize his points without assuming anything about Naomi's strategy, and that Ken always uses it. Third, she has realized that she hates to lose. Naomi has decided that instead of playing War, she will play a game she calls Deceitful War. The great thing about Deceitful War is that Ken will think they're playing War!<br /><br />
+Here is how Deceitful War works, with differences between Deceitful War and War in bold:<br /><br />
+1.	Each player weighs each of his or her own blocks. **Naomi also weighs Ken's blocks while he isn't looking, so Naomi knows the weights of all blocks** and Ken only knows the weights of his own blocks.<br />
+2.	They repeat the following process?N?times:<br />
+> 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.<br />
+> 2.	Naomi tells Ken **a number, ToldNaomi, between 0.0kg and 1.0kg exclusive**. Ken, who thinks they're playing War, thinks the number Naomi just told him is ChosenNaomi.<br />
+> 3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
+> 4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
+> 5.	Both blocks are destroyed in a fire.<br /><br />
+Naomi doesn't want Ken to know that she isn't playing War; so when she is choosing which block to play, and what mass to tell Ken, she must make sure that the balance scale won't reveal that ChosenNaomi ¡Ú ToldNaomi. In other words, she must make decisions so that:<br /><br />
+* ChosenNaomi > ChosenKen if, and only if, ToldNaomi > ChosenKen, and<br />
+* ToldNaomi?is not equal to the mass of any of Ken's blocks, because he knows that isn't possible.<br /><br />
+It might seem like Naomi won't win any extra points by being deceitful, because Ken might discover that she wasn't playing War; but Naomi knows Ken thinks both players are playing War, and she knows what he knows, and she knows Ken will always follow his unique optimal strategy for War, so she can always predict what he will play.<br /><br />
+You'll be given the masses of the blocks Naomi and Ken started with. Naomi will play Deceitful War optimally to gain the maximum number of points. Ken will play War optimally to gain the maximum number of points *assuming that both players are playing War*. What will Naomi's score be? What would it have been if she had played War optimally instead?<br /><br />
+### Examples
+If each player has a single block left, where Naomi has 0.5kg and Ken has 0.6kg, then Ken is guaranteed to score the point. Naomi can't say her number is ? 0.6kg, or Ken will know she isn't playing War when the balance scale shows his block was heavier.<br /><br />
+If each player has two blocks left, where Naomi has [0.7kg, 0.2kg] and Ken has [0.8kg, 0.3kg], then Naomi could choose her 0.2kg block, and deceive Ken by telling him that she chose a block that was 0.6kg. Ken assumes Naomi is telling the truth (as in how the War game works) and will play his 0.8kg block to score a point. Ken was just deceived, but he will never realize it because the balance scale shows that his 0.8kg block is, like he expected, heavier than the block Naomi played. Now Naomi can play her 0.7kg block, tell Ken it is 0.7kg, and score a point. If Naomi had played War instead of Deceitful War, then Ken would have scored two points and Naomi would have scored zero.<br /><br />
+### Input
+The first line of the input gives the number of test cases, **T**. **T** test cases follow. Each test case starts with a line containing a single integer **N**, the number of blocks each player has. Next follows a line containing **N** space-separated real numbers: the masses of Naomi's blocks, in kg. Finally there will be a line containing **N** space-separated real numbers: the masses of Ken's blocks, in kg.<br /><br />
+Each of the masses given to Ken and Naomi will be represented as a 0, followed by a decimal point, followed by 1-5 digits. Even though all the numbers in the input have 1-5 digits after the decimal point, Ken and Naomi don't know that; so Naomi can still tell Ken that she played a block with mass 0.5000001kg, and Ken has no reason not to believe her.<br /><br />
+### Output
+For each test case, output one line containing "Case #**x**: **y** **z**", where **x** is the test case number (starting from 1), **y** is the number of points Naomi will score if she plays Deceitful War optimally, and **z** is the number of points Naomi will score if she plays War optimally.<br />
+### Limits
+1 <= **T** <= 50.<br />
+All the masses given to Ken and Naomi are distinct, and between 0.0 and 1.0 exclusive.<br />
+### Small dataset
+1 <= **N** <= 10.
+### Large dataset
+1 <= **N** <= 1000.
+### Sample
+		Input:   
+		4
+		1
+		0.5
+		0.6
+		2
+		0.7 0.2
+		0.8 0.3
+		3
+		0.5 0.1 0.9
+		0.6 0.4 0.3
+		9
+		0.186 0.389 0.907 0.832 0.959 0.557 0.300 0.992 0.899
+		0.916 0.728 0.271 0.520 0.700 0.521 0.215 0.341 0.458
 		   
-
- 
-		   
-Output?
-?		   
-Case #1: 0 0
-Case #2: 1 0
-Case #3: 2 1
-Case #4: 8 4
+		Output:
+		Case #1: 0 0
+		Case #2: 1 0
+		Case #3: 2 1
+		Case #4: 8 4
 		 
 
