@@ -17,49 +17,49 @@ The first line of the input gives the number of test cases,?T.?T?test cases foll
 For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1).<br /><br />
 If there is a single card the volunteer could have chosen, y should be the number on the card. If there are multiple cards the volunteer could have chosen, y should be "Bad magician!", without the quotes. If there are no cards consistent with the volunteer's answers, y should be "Volunteer cheated!", without the quotes. The text needs to be exactly right, so consider copying/pasting it from here.<br /><br />
 ### Limits
-1 <= T <= 100.<br /><br />
-1 <= both answers <= 4.<br /><br />
-Each number from 1 to 16 will appear exactly once in each arrangement.<br /><br />
+1 <= T <= 100.<br />
+1 <= both answers <= 4.<br />
+Each number from 1 to 16 will appear exactly once in each arrangement.<br />
 ###	Sample
  
 
-Input <br /><br /> 
-		3<br /><br />
-		2<br /><br />
-		1 2 3 4<br /><br />
-		5 6 7 8<br /><br />
-		9 10 11 12<br /><br />
-		13 14 15 16<br /><br />
-		3<br /><br />
-		1 2 5 4<br /><br />
-		3 11 6 15<br /><br />
-		9 10 7 12<br /><br />
-		13 14 8 16<br /><br />
-		2<br /><br />
-		1 2 3 4<br /><br />
-		5 6 7 8<br /><br />
-		9 10 11 12<br /><br />
-		13 14 15 16<br /><br />
-		2<br /><br />
-		1 2 3 4<br /><br />
-		5 6 7 8<br /><br />
-		9 10 11 12<br /><br />
-		13 14 15 16<br /><br />
-		2<br /><br />
-		1 2 3 4<br /><br />
-		5 6 7 8<br /><br />
-		9 10 11 12<br /><br />
-		13 14 15 16<br /><br />
-		3<br /><br />
-		1 2 3 4<br /><br />
-		5 6 7 8<br /><br />
-		9 10 11 12<br /><br />
-		13 14 15 16<br /><br />
+Input <br />
+		3
+		2
+		1 2 3 4
+		5 6 7 8<br />
+		9 10 11 12<br />
+		13 14 15 16<br />
+		3<br />
+		1 2 5 4<br />
+		3 11 6 15<br />
+		9 10 7 12<br />
+		13 14 8 16<br />
+		2<br />
+		1 2 3 4<br />
+		5 6 7 8<br />
+		9 10 11 12<br />
+		13 14 15 16<br />
+		2<br />
+		1 2 3 4<br />
+		5 6 7 8<br />
+		9 10 11 12<br />
+		13 14 15 16<br />
+		2<br />
+		1 2 3 4<br />
+		5 6 7 8<br />
+		9 10 11 12<br />
+		13 14 15 16<br />
+		3<br />
+		1 2 3 4<br />
+		5 6 7 8<br />
+		9 10 11 12<br />
+		13 14 15 16<br />
 <br />
-Output<br /><br />
-		Case #1: 7<br /><br />
-		Case #2: Bad magician!<br /><br />
-		Case #3: Volunteer cheated!<br /><br />
+Output<br />
+		Case #1: 7<br />
+		Case #2: Bad magician!<br />
+		Case #3: Volunteer cheated!<br />
 	 
 
 Problem B. Cookie Clicker Alpha
