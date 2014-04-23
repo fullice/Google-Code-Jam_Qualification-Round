@@ -190,21 +190,21 @@ Problem D. Deceitful War
 Naomi and Ken sometimes play games together. Before they play, each of them gets **N** identical-looking blocks of wood with masses between 0.0kg and 1.0kg (exclusive). All of the blocks have different weights. There are lots of games they could play with those blocks, but they usually play something they call War. Here is how War works:<br /><br />
 1.	Each player weighs each of his or her own blocks, so each player knows the weights of all of his or her own blocks, but not the weights of the other player's blocks.<br />
 2.	They repeat the following process **N** times:<br />
-> 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.<br />
-> 2.	Naomi tells Ken the mass of the block she chose.<br />
+> 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.
+> 2.	Naomi tells Ken the mass of the block she chose.
 
-\3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
-\4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
-\5.	Both blocks are destroyed in a fire.<br /><br />
+3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
+4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
+5.	Both blocks are destroyed in a fire.<br /><br />
 Naomi has realized three things about War. First, she has realized that she loses a lot. Second, she has realized that there is a unique strategy that Ken can follow to maximize his points without assuming anything about Naomi's strategy, and that Ken always uses it. Third, she has realized that she hates to lose. Naomi has decided that instead of playing War, she will play a game she calls Deceitful War. The great thing about Deceitful War is that Ken will think they're playing War!<br /><br />
 Here is how Deceitful War works, with differences between Deceitful War and War in bold:<br /><br />
 1.	Each player weighs each of his or her own blocks. **Naomi also weighs Ken's blocks while he isn't looking, so Naomi knows the weights of all blocks** and Ken only knows the weights of his own blocks.<br />
-2.	They repeat the following process?N?times:<br />
-> 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.<br />
-> 2.	Naomi tells Ken **a number, ToldNaomi, between 0.0kg and 1.0kg exclusive**. Ken, who thinks they're playing War, thinks the number Naomi just told him is ChosenNaomi.<br />
-> 3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
-> 4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
-> 5.	Both blocks are destroyed in a fire.<br /><br />
+2.	They repeat the following process **N** times:<br />
+> 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.
+> 2.	Naomi tells Ken **a number, ToldNaomi, between 0.0kg and 1.0kg exclusive**. Ken, who thinks they're playing War, thinks the number Naomi just told him is ChosenNaomi.
+> 3.	Ken chooses one of his own blocks, with mass ChosenKen.
+> 4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.
+> 5.	Both blocks are destroyed in a fire.
 
 Naomi doesn't want Ken to know that she isn't playing War; so when she is choosing which block to play, and what mass to tell Ken, she must make sure that the balance scale won't reveal that ChosenNaomi ¡Ú ToldNaomi. In other words, she must make decisions so that:<br /><br />
 * ChosenNaomi > ChosenKen if, and only if, ToldNaomi > ChosenKen, and<br />
