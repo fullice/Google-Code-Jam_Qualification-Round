@@ -21,7 +21,8 @@ If there is a single card the volunteer could have chosen, y should be the numbe
 1 <= both answers <= 4.<br />
 Each number from 1 to 16 will appear exactly once in each arrangement.<br />
 ###	Sample
- 
+		Hi
+		you
 
 Input <br />
 		3
