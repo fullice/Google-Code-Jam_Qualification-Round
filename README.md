@@ -218,7 +218,7 @@ Here is how Deceitful War works, with differences between Deceitful War and War 
 > 
 > > 5.	Both blocks are destroyed in a fire.
 
-Naomi doesn't want Ken to know that she isn't playing War; so when she is choosing which block to play, and what mass to tell Ken, she must make sure that the balance scale won't reveal that ChosenNaomi ¡Ú ToldNaomi. In other words, she must make decisions so that:<br /><br />
+Naomi doesn't want Ken to know that she isn't playing War; so when she is choosing which block to play, and what mass to tell Ken, she must make sure that the balance scale won't reveal that ChosenNaomi ¡Ú ToldNaomi. In other words, she must make decisions so that:<br />
 * ChosenNaomi > ChosenKen if, and only if, ToldNaomi > ChosenKen, and
 * ToldNaomi?is not equal to the mass of any of Ken's blocks, because he knows that isn't possible.
 
