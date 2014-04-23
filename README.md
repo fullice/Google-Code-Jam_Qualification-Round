@@ -63,14 +63,14 @@ Each number from 1 to 16 will appear exactly once in each arrangement.<br />
 Problem B. Cookie Clicker Alpha
 ------------------------------
 ###	Introduction
-*Cookie Clicker* is a Javascript game by Orteil, where players click on a picture of a giant cookie. Clicking on the giant cookie gives them cookies. They can spend those cookies to buy buildings. Those buildings help them get even more cookies. Like this problem, the game is very cookie-focused. This problem has a similar idea, but it does not assume you have played?Cookie Clicker. Please don't go play it now: it might be a long time before you come back.<br />
+*Cookie Clicker* is a Javascript game by Orteil, where players click on a picture of a giant cookie. Clicking on the giant cookie gives them cookies. They can spend those cookies to buy buildings. Those buildings help them get even more cookies. Like this problem, the game is very cookie-focused. This problem has a similar idea, but it does not assume you have played *Cookie Clicker*. Please don't go play it now: it might be a long time before you come back.<br />
 ###	Problem
-In this problem, you start with 0 cookies. You gain cookies at a rate of 2 cookies per second, by clicking on a giant cookie. Any time you have at least **C** cookies, you can buy a cookie farm. Every time you buy a cookie farm, it costs you **C** cookies and gives you an extra?F?cookies per second.<br /><br />
+In this problem, you start with 0 cookies. You gain cookies at a rate of 2 cookies per second, by clicking on a giant cookie. Any time you have at least **C** cookies, you can buy a cookie farm. Every time you buy a cookie farm, it costs you **C** cookies and gives you an extra **F** cookies per second.<br /><br />
 Once you have **X** cookies that you haven't spent on farms, you win! Figure out how long it will take you to win if you use the best possible strategy.<br /><br />
 ###	Example
 Suppose **C**=500.0, **F**=4.0 and **X**=2000.0. Here's how the best possible strategy plays out:<br /><br />
 1.	You start with 0 cookies, but producing 2 cookies per second.<br /><br />
-2.	After**250**seconds, you will have**C**=500 cookies and can buy a farm that produces **F**=4 cookies per second.<br /><br />
+2.	After **250** seconds, you will have **C**=500 cookies and can buy a farm that produces **F**=4 cookies per second.<br /><br />
 3.	After buying the farm, you have 0 cookies, and your total cookie production is 6 cookies per second.<br /><br />
 4.	The next farm will cost 500 cookies, which you can buy after about **83.3333333** seconds.<br /><br />
 5.	After buying your second farm, you have 0 cookies, and your total cookie production is 10 cookies per second.<br /><br />
@@ -191,8 +191,8 @@ Naomi and Ken sometimes play games together. Before they play, each of them gets
 1.	Each player weighs each of his or her own blocks, so each player knows the weights of all of his or her own blocks, but not the weights of the other player's blocks.<br />
 2.	They repeat the following process **N** times:<br />
 > 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.<br />
-> 2.	Naomi tells Ken the mass of the block she chose.<br />
-3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
+> 2.	Naomi tells Ken the mass of the block she chose.<br /><br />
+< 3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
 4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
 5.	Both blocks are destroyed in a fire.<br /><br />
 Naomi has realized three things about War. First, she has realized that she loses a lot. Second, she has realized that there is a unique strategy that Ken can follow to maximize his points without assuming anything about Naomi's strategy, and that Ken always uses it. Third, she has realized that she hates to lose. Naomi has decided that instead of playing War, she will play a game she calls Deceitful War. The great thing about Deceitful War is that Ken will think they're playing War!<br /><br />
