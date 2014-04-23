@@ -193,9 +193,9 @@ Naomi and Ken sometimes play games together. Before they play, each of them gets
 > 1.	Naomi chooses one of her own blocks, with mass ChosenNaomi.<br />
 > 2.	Naomi tells Ken the mass of the block she chose.<br />
 
-3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
-4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
-5.	Both blocks are destroyed in a fire.<br /><br />
+\3.	Ken chooses one of his own blocks, with mass ChosenKen.<br />
+\4.	They each put their block on one side of a balance scale, and the person whose block is heavier gets one point.<br />
+\5.	Both blocks are destroyed in a fire.<br /><br />
 Naomi has realized three things about War. First, she has realized that she loses a lot. Second, she has realized that there is a unique strategy that Ken can follow to maximize his points without assuming anything about Naomi's strategy, and that Ken always uses it. Third, she has realized that she hates to lose. Naomi has decided that instead of playing War, she will play a game she calls Deceitful War. The great thing about Deceitful War is that Ken will think they're playing War!<br /><br />
 Here is how Deceitful War works, with differences between Deceitful War and War in bold:<br /><br />
 1.	Each player weighs each of his or her own blocks. **Naomi also weighs Ken's blocks while he isn't looking, so Naomi knows the weights of all blocks** and Ken only knows the weights of his own blocks.<br />
