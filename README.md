@@ -21,46 +21,43 @@ If there is a single card the volunteer could have chosen, y should be the numbe
 1 <= both answers <= 4.<br />
 Each number from 1 to 16 will appear exactly once in each arrangement.<br />
 ###	Sample
-		Hi
-		you
-
-Input <br />
+		Input:
 		3
 		2
 		1 2 3 4
-		5 6 7 8<br />
-		9 10 11 12<br />
-		13 14 15 16<br />
-		3<br />
-		1 2 5 4<br />
-		3 11 6 15<br />
-		9 10 7 12<br />
-		13 14 8 16<br />
-		2<br />
-		1 2 3 4<br />
-		5 6 7 8<br />
-		9 10 11 12<br />
-		13 14 15 16<br />
-		2<br />
-		1 2 3 4<br />
-		5 6 7 8<br />
-		9 10 11 12<br />
-		13 14 15 16<br />
-		2<br />
-		1 2 3 4<br />
-		5 6 7 8<br />
-		9 10 11 12<br />
-		13 14 15 16<br />
-		3<br />
-		1 2 3 4<br />
-		5 6 7 8<br />
-		9 10 11 12<br />
-		13 14 15 16<br />
+		5 6 7 8
+		9 10 11 12
+		13 14 15 16
+		3
+		1 2 5 4
+		3 11 6 15
+		9 10 7 12
+		13 14 8 16
+		2
+		1 2 3 4
+		5 6 7 8
+		9 10 11 12
+		13 14 15 16
+		2
+		1 2 3 4
+		5 6 7 8
+		9 10 11 12
+		13 14 15 16
+		2
+		1 2 3 4
+		5 6 7 8
+		9 10 11 12
+		13 14 15 16
+		3
+		1 2 3 4
+		5 6 7 8
+		9 10 11 12
+		13 14 15 16
 <br />
-Output<br />
-		Case #1: 7<br />
-		Case #2: Bad magician!<br />
-		Case #3: Volunteer cheated!<br />
+Output
+		Case #1: 7
+		Case #2: Bad magician!
+		Case #3: Volunteer cheated!
 	 
 
 Problem B. Cookie Clicker Alpha
